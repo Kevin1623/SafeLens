@@ -1,3 +1,5 @@
+import URLThreatDetector from "@/components/url-threat-detector";
+import { Shield } from "lucide-react";  // if not already imported
 import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -121,7 +123,7 @@ export default function Dashboard() {
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground" data-testid="text-app-title">
-                CRIME LENS
+                CYBER LENS
               </h1>
               <p className="text-sm text-muted-foreground" data-testid="text-app-subtitle">
                 CHENNAI ANALYTICS 2024
@@ -268,15 +270,15 @@ export default function Dashboard() {
               </TabsTrigger>
               <TabsTrigger value="live-feed" className="flex items-center gap-2">
                 <Activity className="w-4 h-4" />
-                Live Feed
+                Live News
               </TabsTrigger>
               <TabsTrigger value="predictions" className="flex items-center gap-2">
                 <Brain className="w-4 h-4" />
                 AI Predictions
               </TabsTrigger>
-              <TabsTrigger value="resources" className="flex items-center gap-2">
-                <Route className="w-4 h-4" />
-                Resources
+              <TabsTrigger value="threat-detector" className="flex items-center gap-2">
+                <Shield className="w-4 h-4" />
+                URL Threat Detector
               </TabsTrigger>
               <TabsTrigger value="social" className="flex items-center gap-2">
                 <Twitter className="w-4 h-4" />
@@ -434,8 +436,8 @@ export default function Dashboard() {
               <PredictiveHotspotAnalysis className="w-full" />
             </TabsContent>
 
-            <TabsContent value="resources">
-              <ResourceAllocationOptimizer className="w-full" />
+            <TabsContent value="threat-detector">
+              <URLThreatDetector />
             </TabsContent>
 
             <TabsContent value="social">
